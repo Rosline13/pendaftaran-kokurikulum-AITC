@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Kokurikulum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #002f4b, #005f73);
+            color: white;
+            padding: 20px;
+        }
+
+        .next-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>PENDAFTARAN KOKURIKULUM</h1>
+    <p>Klik butang di bawah untuk ke borang Google Form.</p>
+    
+    <a href="https://forms.gle/mBafBry58TXBMGRT9" class="next-button" target="_blank">Next Page</a>
+</body>
+
+</html>
+<footer>
+    <p>Hubungi: admin@aitc.edu.my | Telefon: 082-1234 5678 | Fax: 082-365687</p>
+    <p>I-Systems Group of Colleges</p>
+    <p>GROUND & FIRST FLOOR, LOT 1495-1502 BLOCK 12, MUARA TABUAN LAND DISTRICT (MLTD) JALAN MUARA TABUAN 93350 KUCHING SARAWAK</p>
+</footer>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let studentId = document.getElementById("studentId").value;
+        let name = document.getElementById("name").value;
+        let activity = document.getElementById("activity").value;
+
+        if (studentId === "" || name === "") {
+            alert("Sila masukkan ID dan nama anda!");
+            return;
+        }
+
+        let list = document.getElementById("participantList");
+        let listItem = document.createElement("li");
+        listItem.textContent = `${studentId} - ${name} - ${activity}`;
+
+        list.appendChild(listItem);
+
+        document.getElementById("registrationForm").reset();
+    });
+</script>
+
+</body>
+</html>

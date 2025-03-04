@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Kokurikulum Kolej AITC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #002f4b, #005f73);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .container {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #005f73;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #005f73;
+            color: white;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #002f4b, #005f73);
+            color: white;
+            padding: 20px;
+        }
+
+        .next-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <header>
+        <h1>Pendaftaran Kokurikulum Kolej AITC</h1>
+        <p>Daftar dan pilih aktiviti kokurikulum anda</p>
+    </header>
+
+    <section class="container">
+        <h2>Senarai Aktiviti Kokurikulum</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aktiviti</th>
+                    <th>Gambar</th>
+                    <th>Deskripsi</th>
+                    <th>Pensyarah Penasihat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Badminton</td>
+                    <td><img src="https://thumbs.dreamstime.com/b/indoor-badminton-court-showcases-two-shuttlecocks-green-floor-blurred-background-hints-player-action-under-329210178.jpg" alt="Debat"></td>
+                    <td>Mempunyai pengalaman asas bermain badminton secara rekreasi atau pernah dalam kejohanan kecil.</td>
+                    <td>Dr. Aminah</td>
+                </tr>
+                <tr>
+                    <td>Kelab Kebudayaan</td>
+                    <td><img src="https://i.ytimg.com/vi/Yx3JaTEIlUI/maxresdefault.jpg" alt="Kelab Robotik"></td>
+                    <td>mempunyai minat dalam seni dan kebudayaan seperti tarian, muzik, teater, puisi, seni lukis, atau warisan budaya.</td>
+                    <td>Prof. Syafiq</td>
+                </tr>
+                <tr>
+                    <td>Persatuan Seni Visual</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQqaBJnTwt8ex7g9kHYzhQ96CAqbdPmYxpWkBHD7luWzHs3sdMPqasl1Nbcf_LsDhg06c&usqp=CAU" alt="Persatuan Seni"></td>
+                    <td>Mengetahui aktiviti seni lukis dalam bentuk fizikal atau teknologi.</td>
+                    <td>En. Faris</td>
+                </tr>
+                <tr>
+                    <td>Kelab Bola Sepak</td>
+                    <td><img src="https://www.kosmo.com.my/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-02-at-17.04.08.jpeg" alt="Kelab Sukarelawan"></td>
+                    <td>Penguasaan dribbling, passing, shooting, dan kawalan bola.
+                    Daya tahan, kelajuan, kekuatan, dan kecergasan yang sesuai dengan keperluan posisi bermain.
+                    Pemahaman tentang formasi, strategi permainan, dan pergerakan di atas padang.
+                    </td>
+                    <td>Pn. Liyana</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</head>
+<body>
+    <h1>PENDAFTARAN KOKURIKULUM</h1>
+    <p>Tekan next page untuk membuat pendaftaran.</p>
+    
+    <a href="nextpage.html" class="next-button">Next Page</a>
+</body>
+
+</html>
+    <footer>
+        <p>Hubungi: admin@aitc.edu.my | Telefon: 082-1234 5678 | Fax: 082-365687</p>
+        <p>I-Systems Group of Colleges</p>
+        <p>GROUND & FIRST FLOOR, LOT 1495-1502 BLOCK 12, MUARA TABUAN LAND DISTRICT (MLTD) JALAN MUARA TABUAN 93350 KUCHING SARAWAK</p>
+    </footer>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let studentId = document.getElementById("studentId").value;
+            let name = document.getElementById("name").value;
+            let activity = document.getElementById("activity").value;
+
+            if (studentId === "" || name === "") {
+                alert("Sila masukkan ID dan nama anda!");
+                return;
+            }
+
+            let list = document.getElementById("participantList");
+            let listItem = document.createElement("li");
+            listItem.textContent = `${studentId} - ${name} - ${activity}`;
+
+            list.appendChild(listItem);
+
+            document.getElementById("registrationForm").reset();
+        });
+    </script>
+
+</body>
+</html>
